@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coins_Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
-   public GameObject cointPrefab;
+    public GameObject coinPrefab;
     void Start()
     {
         StartCoroutine(CoinSpawner());
@@ -19,7 +19,7 @@ public class Coins_Spawner : MonoBehaviour
     void CoinSpawn()
     {
         float rand = Random.Range(-1.8f, 1.8f);
-        Instantiate(cointPrefab, new Vector3(rand, transform.position.y,transform.position.z),Quaternion.identity);
+        Instantiate(coinPrefab, new Vector3(rand, transform.position.y,transform.position.z),Quaternion.identity);
     }
 
     IEnumerator CoinSpawner()
@@ -27,7 +27,7 @@ public class Coins_Spawner : MonoBehaviour
         while(true)
         {
             int time = Random.Range(10, 20);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(time);
             CoinSpawn();
         }
     }
