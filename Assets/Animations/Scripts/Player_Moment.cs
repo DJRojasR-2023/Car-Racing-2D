@@ -7,6 +7,9 @@ public class Player_Moment : MonoBehaviour
     public Transform playertransform;
     public float speed = 0.5f;
     public float rotationspeed = 1f;
+
+    public score_manager scoreValue;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +65,12 @@ public class Player_Moment : MonoBehaviour
         if(collision.gameObject.tag == "Cars")
         {
             Time.timeScale = 0;
+        }
+
+        if (collision.gameObject.tag == "Coin")
+        {
+            scoreValue.score += 10;
+            Destroy(collision.gameObject);
         }
     }
 }
