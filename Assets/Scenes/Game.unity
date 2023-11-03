@@ -573,7 +573,7 @@ MonoBehaviour:
   playertransform: {fileID: 675348779}
   speed: 3
   rotationspeed: 2
-  scoreValue: {fileID: 0}
+  scoreValue: {fileID: 675348783}
 --- !u!50 &675348781
 Rigidbody2D:
   serializedVersion: 4
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e45f123cc55c4446a9bd21fd4a97fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 0}
+  coinPrefab: {fileID: 1906273121512909843, guid: d48d0686b652a00478b6f2020f8bcf72, type: 3}
 --- !u!1 &2041644593
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +793,6 @@ GameObject:
   - component: {fileID: 2041644595}
   - component: {fileID: 2041644594}
   - component: {fileID: 2041644598}
-  - component: {fileID: 2041644599}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -894,19 +893,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 2041644595}
   speed: 1
---- !u!114 &2041644599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041644593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e45f123cc55c4446a9bd21fd4a97fb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 0}
 --- !u!1 &2057756063
 GameObject:
   m_ObjectHideFlags: 0

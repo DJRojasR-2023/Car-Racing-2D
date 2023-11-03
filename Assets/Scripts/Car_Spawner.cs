@@ -26,7 +26,7 @@ public class Car_Spawner : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(1);
             cars();
         }
         

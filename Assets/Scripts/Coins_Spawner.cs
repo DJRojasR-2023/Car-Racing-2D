@@ -26,7 +26,7 @@ public class Coins_Spawner : MonoBehaviour
     {
         while(true)
         {
-            int time = Random.Range(10, 20);
+            int time = Random.Range(5, 10);
             yield return new WaitForSeconds(time);
             CoinSpawn();
         }

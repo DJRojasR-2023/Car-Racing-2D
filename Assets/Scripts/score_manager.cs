@@ -49,7 +49,7 @@ public class score_manager : MonoBehaviour
     IEnumerator Reload()
     {
 
-        yield return new WaitForSeconds(Random.Range(5,10));
+        yield return new WaitForSeconds(Random.Range(50,100));
         SceneManager.LoadScene("Game");
 
 

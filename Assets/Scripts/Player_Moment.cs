@@ -9,11 +9,11 @@ public class Player_Moment : MonoBehaviour
     public float rotationspeed = 1f;
 
     public score_manager scoreValue;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Time.timeScale);
+       
     }
 
     // Update is called once per frame
@@ -22,7 +22,8 @@ public class Player_Moment : MonoBehaviour
         movement();
         Clamp();
 
-       
+
+
     }
     void movement()
     {
@@ -50,27 +51,30 @@ public class Player_Moment : MonoBehaviour
             playertransform.position -= new Vector3(0, speed * Time.deltaTime, 0);
         }
     }
-     void Clamp()
-        {
-            Vector3 pos = playertransform.position;
-            pos.x = Mathf.Clamp(pos.x, -1.7f, 1.5f);
-            playertransform.position = pos;
+    void Clamp()
+    {
+        Vector3 pos = playertransform.position;
+        pos.x = Mathf.Clamp(pos.x, -1.7f, 1.5f);
+        playertransform.position = pos;
 
-            Vector3 pos1 = playertransform.position;
-            pos1.y = Mathf.Clamp(pos1.y, -3.5f, 3.5f);
-            playertransform.position = pos1;
-        }
+        Vector3 pos1 = playertransform.position;
+        pos1.y = Mathf.Clamp(pos1.y, -3.5f, 3.5f);
+        playertransform.position = pos1;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Cars")
+        if (collision.gameObject.tag == "Cars")
         {
-            Time.timeScale = 0;
-        }
 
-        if (collision.gameObject.tag == "Coin")
+        }
+        else if (collision.gameObject.tag == "Coin")
         {
             scoreValue.score += 10;
             Destroy(collision.gameObject);
         }
+
     }
+   
+
 }

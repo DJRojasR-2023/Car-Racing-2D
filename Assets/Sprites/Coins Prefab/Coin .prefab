@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1906273121512909846}
   - component: {fileID: 1906273121512909841}
   - component: {fileID: 1906273121512909840}
-  - component: {fileID: 1906273121512909847}
   - component: {fileID: 7830275240134537117}
+  - component: {fileID: 6188677141462568063}
   m_Layer: 0
   m_Name: 'Coin '
   m_TagString: Coin
@@ -95,7 +95,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906273121512909843}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7ab1a53e9917d2e42b24653ecdc3bb17, type: 2}
   m_CullingMode: 0
@@ -107,7 +107,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &1906273121512909847
+--- !u!114 &7830275240134537117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906273121512909843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abf27d304f30fd4baf02e0a118988d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cartransform: {fileID: 1906273121512909846}
+  speed: 4
+--- !u!58 &6188677141462568063
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,18 +136,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18333334
---- !u!114 &7830275240134537117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906273121512909843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abf27d304f30fd4baf02e0a118988d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cartransform: {fileID: 0}
-  speed: 5
+  m_Radius: 0.185
