@@ -10,10 +10,13 @@ public class Player_Moment : MonoBehaviour
 
     public score_manager scoreValue;
 
+    public GameObject gameOverPanel;
     // Start is called before the first frame update
     void Start()
     {
-       
+        gameOverPanel.SetActive(false);
+        Time.timeScale = 1;
+
     }
 
     // Update is called once per frame
@@ -66,7 +69,8 @@ public class Player_Moment : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cars")
         {
-
+            Time.timeScale = 0;
+            gameOverPanel.SetActive(true);
         }
         else if (collision.gameObject.tag == "Coin")
         {
